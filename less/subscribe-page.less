@@ -1,0 +1,75 @@
+// Subscribe Page Content
+
+.subscribe {
+  border-left: 2px solid @ebony-clay;
+  border-right: 2px solid @ebony-clay;
+
+  .intro {
+    img {
+      .full-width();
+      margin-top: 100px; // Make room for fixed navigation bar
+      border-radius: 5px;
+    }
+  }
+
+  .signup {
+    .full-width();
+    padding: 0 25px;
+
+    h3, form {
+      margin-top: 25px;
+    }
+
+    .contact {
+      fieldset {
+        .full-width();
+      }
+      
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      input[type="url"],
+      select,
+      textarea {
+        .full-width();
+        background: white;
+        margin: 10px 0 5px;
+        padding: 10px;
+        font-size: 1.6rem;
+      }
+
+      select {
+        height: 50px;
+        color: black;
+      }
+
+      textarea {
+        height: 100px;
+      }
+    }
+
+    .btn button {
+      margin: 10px 0 20px;
+      // .button-style(width, padding, font-size, background-color, color, shared text-shadow / border-color)
+      .button-style(
+        110px,
+        5px 15px,
+        1.8rem,
+        @btn-bg-color,
+        @sea-shell,
+        @ebony-clay
+      );
+
+      @media @phone {
+        .button-style(
+          100%,
+          15px 0,
+          1.6rem,
+          @btn-bg-color,
+          @sea-shell,
+          @ebony-clay
+        );
+      }
+    }
+  }
+} // home

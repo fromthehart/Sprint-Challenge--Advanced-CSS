@@ -5,6 +5,8 @@
 
 html {
   font-size: 62.5%;
+  background: url('../img/stars.jpg');
+  background-size: cover;
 }
 
 html, body {
@@ -15,6 +17,14 @@ html, body {
 h1, h2, h3, h4, h5 {
   font-family: 'Russo One', sans-serif;
   color: @header-font-color;
+}
+
+h1 {
+  font-size: 3.6rem;
+
+  @media @phone {
+    font-size: 3.2rem;
+  }
 }
 
 h2 {
@@ -31,8 +41,12 @@ p {
 }
 
 .container {
+  .full-width();
   max-width: 800px;
-  width: 100%;
-  margin: 0 auto;  
+  margin: 0 auto;
+  background: @main-bg;
 }
 
+img {
+  max-width: 100%;
+}
