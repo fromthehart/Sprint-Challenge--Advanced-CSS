@@ -1,0 +1,69 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>SpaceWalkers</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Russo+One|Ubuntu" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+  <!-- navigation code here -->
+  <div class="navbar">
+    <div class="logo">
+      <h1>SpaceWalkers</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+      <a href="#">Sign Up</a>
+    </nav>
+  </div><!-- navbar -->
+
+  <div class="container subscribe">
+
+    <header class="intro">
+      <!-- image code here -->
+      <img src="img/main-header.png" alt="A view across the top of the Earth's atmosphere">
+    </header>
+
+    <section class="signup">
+      <h3>Subscribe to Spacewalker Magazine for free!</h3>
+      <form class="contact" method="post" action="https://formspree.io/fromthehart@pm.me">
+        <fieldset>
+          <input name="name" placeholder="Name" type="text" tabindex="1" required autofocus>
+        </fieldset>
+        <fieldset>
+          <input name="email" placeholder="E-mail" type="email" tabindex="2" required>
+        </fieldset>
+        <fieldset>
+          <textarea name="message" placeholder="Tell us what you love most about space!" tabindex="3" required></textarea>
+        </fieldset>
+        <fieldset>
+          <div class="btn">
+            <button type="submit" id="contact-submit" tabindex="4" data-submit="...Sending">Subscribe</button>
+          </div>
+        </fieldset>
+      </form>
+    </section><!-- signup -->
+    
+    <footer>
+      <p>Copyright &copy; SpaceWalkers 2019</p>
+    </footer>
+
+  </div>
+</body>
+
+</html>
