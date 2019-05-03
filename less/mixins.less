@@ -1,5 +1,24 @@
 // Mixins Here
 
+.button-style(@btnWidth: 100px, @btnPadding: 5px 20px, @txtSize: 1.6rem, @btnBg: @btn-bg-color, @btnTxtColor: @sea-shell, @btnOutline: @ebony-clay) {
+  background: @btnBg;
+  border: 1px solid @btnOutline;
+  border-radius: 5px;
+  color: @btnTxtColor;
+  font-size: @txtSize;
+  padding: @btnPadding;
+  text-shadow: 0px 0px 1px @btnOutline;
+  width: @btnWidth;
+  
+  &:hover {
+    background: @btnTxtColor;
+    border: 1px solid @btnBg;
+    color: @btnBg;
+    font-weight: bold;
+    text-shadow: 0px 0px 1px transparent;
+  }
+}
+
 .flex(@justify: center, @flow: initial, @align-itm: center, @align-con: center) {
   display: flex;
   justify-content: @justify;
