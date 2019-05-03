@@ -1,1 +1,13 @@
 // Mixins Here
+
+.flex(@justify: center, @flow: initial, @align-itm: center, @align-con: center) {
+  display: flex;
+  justify-content: @justify;
+  flex-flow: @flow;
+  align-items: @align-itm;
+  align-content: @align-con;
+}
+
+.full-width() {
+  width: 100%;
+}
