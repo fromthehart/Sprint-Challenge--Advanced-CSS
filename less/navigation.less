@@ -1,10 +1,14 @@
-// Navigation code here
+// Navigation code here 
 
 .navbar {
   .flex(@flow: column nowrap);
   .full-width();
   background-color: @nav-bg;
+  border-bottom: 1px solid @ebony-clay;
+  box-shadow: 0 0 15px 0 @ebony-clay;
+  opacity: 0.95;
   padding: 10px 0;
+  position: fixed;
 
   .logo {
     .full-width();
@@ -23,16 +27,42 @@
   nav a {
     color: @main-font-color;
     font-size: 1.6rem;
+    font-weight: bold;
     padding: 10px 0;
     text-decoration: none;
+    margin-top: -21px;
+
+    &:before {
+      display: block;
+      position: relative;
+      left: -28px;
+      top: 21px;
+      content: url('../img/blank.png');
+
+      @media @phone {
+        display: none;
+      }
+    }
 
     @media @phone {
-      font-size: 1.2rem;
       padding: 10px;
+      margin-top: 0px;
     }
 
     &:hover {
-      color: @waterloo;
+      color: @nav-hover;
+
+      &:before {
+        display: block;
+        position: relative;
+        left: -25px;
+        top: 23px;
+        content: url('../img/rocket.gif');
+
+        @media @phone {
+          display: none;
+        }
+      }
     }
   }
 }

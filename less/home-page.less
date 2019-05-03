@@ -1,6 +1,9 @@
 // Home Content
 
 .home {
+  border-left: 2px solid @ebony-clay;
+  border-right: 2px solid @ebony-clay;
+
   .intro {
     h2 {
       padding: 15px;
@@ -9,6 +12,12 @@
     p {
       padding: 0 15px;
     }
+
+    img {
+      .full-width();
+      margin-top: 100px; // Make room for fixed navigation bar
+      border-radius: 5px;
+    }  
   }
 
   .space-images {

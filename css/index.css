@@ -131,6 +131,8 @@ table {
 }
 html {
   font-size: 62.5%;
+  background: url('../img/stars.jpg');
+  background-size: cover;
 }
 html,
 body {
@@ -164,9 +166,10 @@ p {
   line-height: 1.4;
 }
 .container {
-  max-width: 800px;
   width: 100%;
+  max-width: 800px;
   margin: 0 auto;
+  background: #F6F6F6;
 }
 img {
   max-width: 100%;
@@ -179,7 +182,11 @@ img {
   align-content: center;
   width: 100%;
   background-color: #F6F6F6;
+  border-bottom: 1px solid #23293B;
+  box-shadow: 0 0 15px 0 #23293B;
+  opacity: 0.95;
   padding: 10px 0;
+  position: fixed;
 }
 .navbar .logo {
   width: 100%;
@@ -201,17 +208,43 @@ img {
 .navbar nav a {
   color: #5E6164;
   font-size: 1.6rem;
+  font-weight: bold;
   padding: 10px 0;
   text-decoration: none;
+  margin-top: -21px;
+}
+.navbar nav a:before {
+  display: block;
+  position: relative;
+  left: -28px;
+  top: 21px;
+  content: url('../img/blank.png');
+}
+@media screen and (max-width: 500px) {
+  .navbar nav a:before {
+    display: none;
+  }
 }
 @media screen and (max-width: 500px) {
   .navbar nav a {
-    font-size: 1.2rem;
     padding: 10px;
+    margin-top: 0px;
   }
 }
 .navbar nav a:hover {
-  color: #81848E;
+  color: #22283A;
+}
+.navbar nav a:hover:before {
+  display: block;
+  position: relative;
+  left: -25px;
+  top: 23px;
+  content: url('../img/rocket.gif');
+}
+@media screen and (max-width: 500px) {
+  .navbar nav a:hover:before {
+    display: none;
+  }
 }
 footer {
   color: #22283B;
@@ -223,11 +256,20 @@ footer {
   justify-content: center;
   align-items: center;
 }
+.home {
+  border-left: 2px solid #23293B;
+  border-right: 2px solid #23293B;
+}
 .home .intro h2 {
   padding: 15px;
 }
 .home .intro p {
   padding: 0 15px;
+}
+.home .intro img {
+  width: 100%;
+  margin-top: 100px;
+  border-radius: 5px;
 }
 .home .space-images {
   display: flex;
