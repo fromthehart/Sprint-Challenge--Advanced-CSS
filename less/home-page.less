@@ -1,22 +1,18 @@
 // Home Content
 
 .home {
-
   .intro {
-
     h2 {
       padding: 15px;
     }
 
     p {
-      padding:0 15px;
+      padding: 0 15px;
     }
-  
   }
 
   .space-images {
-    display: flex;
-    flex-wrap: wrap;
+    .flex(@flow: row wrap);
     width: 100%;
 
     img {
@@ -24,6 +20,16 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+    }
+
+    @media @phone {
+      .blast {
+        .full-width();
+      }
+      .sky,
+      .launch {
+        display: none;
+      }
     }
   }
 
@@ -40,17 +46,31 @@
   }
 
   .walk {
+    .flex();
     margin-top: 60px;
     border-top: 1px solid @main-border-color;
     padding: 50px 60px;
-    display: flex;
-    justify-content: center;
+
+    @media @phone {
+      .full-width();
+      .flex(@flow: column-reverse nowrap);
+      margin-top: 15px;
+      padding: 15px;
+    }
 
     .walk-text {
       width: 50%;
 
+      @media @phone {
+        .full-width();
+      }
+
       h3 {
         margin-bottom: 10px;
+
+        @media @phone {
+          margin-top: 35px;
+        }
       }
 
       p {
@@ -59,14 +79,37 @@
 
       .btn button {
         // .button-style(width, padding, font-size, background-color, color, shared text-shadow / border-color)
-       .button-style(110px, 5px 15px, 1.8rem, @btn-bg-color, @sea-shell, @ebony-clay);
-     }
+        .button-style(
+          110px,
+          5px 15px,
+          1.8rem,
+          @btn-bg-color,
+          @sea-shell,
+          @ebony-clay
+        );
+
+        @media @phone {
+          .button-style(
+            100%,
+            15px 0,
+            1.6rem,
+            @btn-bg-color,
+            @sea-shell,
+            @ebony-clay
+          );
+        }
+      }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
-      
+
+      @media @phone {
+        .full-width();
+        margin: 0;
+      }
+
       img {
         width: 100%;
         height: auto;
@@ -74,4 +117,4 @@
       }
     }
   }
-}// home
+} // home
