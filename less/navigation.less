@@ -1,1 +1,29 @@
 // Navigation code here
+
+.navbar {
+  .flex(@flow: column nowrap);
+  .full-width();
+  background-color: @nav-bg;
+  padding: 10px 0;
+
+  .logo {
+    .full-width();
+    text-align: center;
+  }
+
+  nav {
+    .flex(@justify: space-around);
+    width: 500px;
+  }
+
+  nav a {
+    color: @main-font-color;
+    font-size: 1.6rem;
+    padding: 10px 0;
+    text-decoration: none;
+
+    &:hover {
+      color: @waterloo;
+    }
+  }
+}
