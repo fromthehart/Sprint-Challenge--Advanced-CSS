@@ -34,13 +34,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the difference between an adaptive website and a fully responsive website?
 
+Adaptive websites typically rely on media queries to provide users one of a handful of designs according to breakpoints, usually for desktop, tablet and phone. However, they're similar to fixed in that they don't attempt to seamlessly handle the wide variety of possible device widths in between. Fully responsive also target different device profiles as with adaptive, but use responsive units, percentage based widths, flex box, and other techniques to rearrange space intelligently and make the most of each device's screen real estate.
+
 2. Describe what it means to be mobile first vs desktop first.
+
+Mobile first designs begin with default CSS stylings that are designed to look and work best on mobile devices, and then min-width based media queries are used to add modified rules for progressively wider viewports. Mobile first will never start with a fixed width design. Desktop first chooses default stylings for large viewports, and often (but not always) uses a fixed width to constrain things from being too wide to view comfortably on large screens. Media queries based on max-width are then employed to adjust styling for devices with smaller screens, rearranging layout and widths as necessary to improve the experience and eliminate tedious zooming on those devices.
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
 
+It corresponds to the equivalent of `font-size: 10px`, creating a base-10 foundation on which to translate more familiar `px` based font sizings to `rem`. For instance, `font-size: 24px` for an `h1` tag would translate to `font-size: 2.4rem` when the base font size is set to 62.5%. Easy peasy lemon squeezy.
+
 4. How would you describe preprocessing to someone new to CSS?
 
+Preprocessing extends the capabilities of CSS to allow for cleaner and more powerful structuring of document styling. It lets the developer define custom `variables` and `mixins` (similar to functions) to simplify changing values in many places at once, promoting faster iterations and debugging, and reducing repetition. It also lets developers write CSS in a way that follows the document structure by allowing for nesting. After writing your extended CSS in your chosen preprocessor language, a compiler quickly translates your code into standard CSS.
+
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+My favorite is by far parametric mixins. Being able to define a mixin that lets me produce different CSS for different needs, without having to code each use case manually, is so powerful. I wouldn't say any concept gives me trouble yet, but I may have difficulty finding many uses for escaping beyond simplifying media queries. Also, in exploring the LESS documentation, I can see that there are many features beyond which we've studied so far that may be helpful for some projects. In many cases, a well-designed mixin could replace what one might resort to Javascript otherwise, reducing overhead and code complexity.
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
